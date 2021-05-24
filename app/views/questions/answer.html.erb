@@ -1,0 +1,12 @@
+<h1>Stupid Coaching</h1>
+
+<div class="perg">
+  <p><%= @user_question %> </p>
+  <p>-You</p>
+</div>
+
+<div class="resp">
+  <p><strong><%= @user_answer %></strong></p>
+  <p>-Your coach</p>
+</div>
+<%= link_to  "Ask a new question", ask_path %>
