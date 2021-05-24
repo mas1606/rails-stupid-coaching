@@ -7,11 +7,6 @@ class ActiveSupport::TestCase
   fixtures :all
 end
 
-# test/application_system_test_case.rb
-class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  driven_by :headless_chrome # Update this line
-end
-
 Capybara.register_driver :headless_chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu window-size=1400,900])
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
